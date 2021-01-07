@@ -36,7 +36,10 @@ RUN apk del libpng-dev \
     libwebp-dev \
     zlib-dev \
     libxpm-dev
-    
+
+# Install Nodejs & NPM
+RUN apk add --no-cache --update nodejs npm
+
 # Install Composer
 RUN curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
